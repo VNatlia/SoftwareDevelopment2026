@@ -1,7 +1,6 @@
 package org.softwareDevelopmenttt;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 import java.util.Random;
 
 public class Main {
@@ -15,14 +14,8 @@ public class Main {
         int[][] A = new int[rows][cols];
         Random rand = new Random();
 
-        // Заповнення матриці
-       /* for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                A[i][j] = rand.nextInt(2); // 0 або 1
-            }
-        }*/
 
-        // Матриця ДО
+
         System.out.println("Початковий вигляд матриці:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -34,7 +27,7 @@ public class Main {
         System.out.println();
 
 
-        // Заміна 0 на "a"
+    
         String[][] B = new String[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
