@@ -14,7 +14,6 @@ public class Main {
 
 
         System.out.println("Згенеровані числа:");
-        //for (int i = 0; i < numbers.length; i++) {
         for (int i = 0; i < 5; i++) {
             numbers[i] = 100 + random.nextInt(900);
             System.out.print(numbers[i] + " ");
