@@ -22,47 +22,47 @@ public class Main {
         try {
             System.out.println("\n1) Відкриваємо файл");
 
-            File inputFile = new File(inputFileName);
+            File inputFile = new File(inputFileName); 
             Scanner fileScanner = new Scanner(inputFile);
 
             System.out.println("2) Читаємо дані з файлу");
 
-            int n = fileScanner.nextInt();
-            System.out.println("Розмір матриці: " + n);
+            int matrixSize = fileScanner.nextInt(); 
+            System.out.println("Розмір матриці: " + matrixSize);
 
-            int[][] matrix = new int[n][n];
-            int[][] transposed = new int[n][n];
+            int[][] matrix = new int[matrixSize][matrixSize];
+            int[][] transposed = new int[matrixSize][matrixSize];
 
-            // Зчитування
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
+            // Зчитування по символьно
+            for (int i = 0; i < matrixSize; i++) {
+                for (int j = 0; j < matrixSize; j++) {
                     matrix[i][j] = fileScanner.nextInt();
                 }
             }
 
             System.out.println("3) Початкова матриця:");
-            printMatrix(matrix, n);
+            printMatrix(matrix, matrixSize);
 
             System.out.println("4) Виконуємо транспонування");
 
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
+            for (int i = 0; i < matrixSize; i++) {
+                for (int j = 0; j < matrixSize; j++) {
                     transposed[j][i] = matrix[i][j];
                 }
             }
 
             System.out.println("5) Транспонована матриця:");
-            printMatrix(transposed, n);
+            printMatrix(transposed, matrixSize);
 
             // Запис у файл
             System.out.println("6) Записуємо результат у файл");
 
             FileWriter writer = new FileWriter(outputFileName);
 
-            writer.write(n + "\n");
+            writer.write(matrixSize + "\n");
 
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
+            for (int i = 0; i < matrixSize; i++) {
+                for (int j = 0; j < matrixSize; j++) {
                     writer.write(transposed[i][j] + " ");
                 }
                 writer.write("\n");
